@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TriCraft 1.1</title>
+<link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/f678b87c-9386-4961-b84b-850c4c5e1f1d/download%20(1).jpg?v=1651090035650">
+
+<script type="text/javascript" src="jsbn/jsbn.js"></script>
+<script type="text/javascript" src="jsbn/jsbn2.js"></script>
+<script type="text/javascript" src="jsbn/base64.js"></script>
+<script type="text/javascript" src="jsbn/prng4.js"></script>
+<script type="text/javascript" src="jsbn/rng.js"></script>
+<script type="text/javascript" src="jsbn/rsa.js"></script>
+<script type="text/javascript" src="jsbn/rsa2.js"></script>
+
+<script type="text/javascript" src="asn1-parser.js"></script>
+
+<script type="text/javascript" src="music.js"></script>
+
+<script type="text/javascript" src="classes.js?t=updateme11"></script>
+<script type="text/javascript">
+//window.eag_self_proxy=true;//set to true to set the default proxy to the current url
+//window.eag_proxy_list="";//set to a string of comma-separated proxy ip:port combinations for a custom proxy list
+var name="PixelCraft",motd="A public 1.5.2 server",ip="pixelcraft.me";
+window.addEventListener("load", function(){
+document.requestPointerLock=document.requestPointerLock||function(){};
+document.exitPointerLock=document.exitPointerLock||function(){};
+window.minecraftOpts = [
+"game_frame","assets.epk",
+btoa(atob("CgAACQAHc2VydmVycwoAAAAKCAAKZm9yY2VkTU9URAADZ29nAQALaGlkZUFkZHJlc3MBCAACaXAAHXdzczovL21jLnByaW1pdHQuZGV2L3N1cnZpdmFsCAAEbmFtZQAUZmFjdGlvbnMgKHByaW1jcmFmdCkACAAKZm9yY2VkTU9URAADZ29nAQALaGlkZUFkZHJlc3MBCAACaXAAMXdzczovLzJiMmVhZ2xlci11bmNyYWNrZWQuY2hyb21lb3MucmVwbC5jby9zZXJ2ZXIIAARuYW1lAB5hbmFyY2h5ICgyYjJ0KSBidXQgb24gdHJpY3JhZnQACAAKZm9yY2VkTU9URAADZ29nAQALaGlkZUFkZHJlc3MBCAACaXAAIndzczovL3ZhbmlsbGFjcmFmdHNtcC5vcmcvZmFjdGlvbnMIAARuYW1lACpnZW5lcmFsIHNlcnZlciB3LyBmYWN0aW9ucyBhbmQgb3RoZXIgc3R1ZmYACAAKZm9yY2VkTU9URAADZ29nAQALaGlkZUFkZHJlc3MBCAACaXAAHXdzczovL3N1cy5zaGhub3dpc25vdHRoZXRpLm1lCAAEbmFtZQAnb3AgYW5hcmNoeSAoZ2l2ZXMgb3BlcmF0b3IgcGVybWlzc2lvbnMpAAgACmZvcmNlZE1PVEQAA2dvZwEAC2hpZGVBZGRyZXNzAQgAAmlwAB93c3M6Ly93ZWIuYXNzcGl4ZWwubmV0L0NBUGl4ZWwvCAAEbmFtZQAaQSQkUGl4ZWwgKGh5cGl4ZWwgYnV0IGEkJCkACAAKZm9yY2VkTU9URAADZ29nAQALaGlkZUFkZHJlc3MBCAACaXAAGndzczovL2Flb24tbmV0d29yay50ay9hZW9uCAAEbmFtZQAtQWVvbiBOZXR3b3JrIChnb29kIGJ1dCBhbHdheXMgZnVsbCBnYW1lbW9kZXMpAAgACmZvcmNlZE1PVEQAA2dvZwEAC2hpZGVBZGRyZXNzAQgAAmlwABR3c3M6Ly9tYy5iMnNlcnZlci50awgABG5hbWUAI0hhbGYtQW5hcmNoeSBTZXJ2ZXIgKGxpa2UgZmFjdGlvbnMpAAgACmZvcmNlZE1PVEQAA2dvZwEAC2hpZGVBZGRyZXNzAQgAAmlwABZ3c3M6Ly9zZXJ2ZXIyLm1jYnMuY2YvCAAEbmFtZQAKTUNCUyB8IFNNUAAIAApmb3JjZWRNT1REAAlnb2d5IHdvZ3kBAAtoaWRlQWRkcmVzcwEIAAJpcAAkd3NzOi8vc2VhbGNyYWZ0LmRkbnMubmV0OjQ0Mi9zZXJ2ZXJzCAAEbmFtZQBEU2VhbENlbnRyYWwgU2VydmVyIChpZGsgYWJvdXQgdGhlaXIgc2VydmVyLCBidXQgc2VhbGNlbnRyYWwgZ29vZCA8MykACAAKZm9yY2VkTU9URAAhZ29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29nAQALaGlkZUFkZHJlc3MBCAACaXAAFXdzczovL21lc3MuZXUub3JnL3MxLwgABG5hbWUAGU1lc3NDcmFmdCBTdXJ2aXZhbCBTZXJ2ZXIAAA==").replace("motdhere",String.fromCharCode(motd.length)+motd).replace("namehere",String.fromCharCode(name.length)+name).replace("iphere",String.fromCharCode(ip.length)+ip))
+];
+(function(){
+var q = window.location.search;
+if(typeof q === 'string' && q.startsWith("?")) {
+	q = new URLSearchParams(q);
+	var s = q.get("server");
+	if(s) window.minecraftOpts.push(s);
+}
+})();
+main();
+});
+</script>
+</head>
+<body style="margin:0px;width:100vw;height:100vh;" id="game_frame">
+</body>
+</html>
